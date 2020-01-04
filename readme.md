@@ -1,6 +1,6 @@
 # ExceptionCatcher
 
-> Catch Objective-C exceptions in Swift
+> Catch [Objective-C exceptions](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Exceptions/Tasks/HandlingExceptions.html) in Swift
 
 There are many Cocoa APIs that can throw exceptions that cannot be caught in Swift (`NSKeyedUnarchiver`, `NSTask`,  `NSObject#value(forKey:)`, etc). This package wraps an Objective-C exception handler to make it possible to catch such exceptions.
 
@@ -11,7 +11,7 @@ There are many Cocoa APIs that can throw exceptions that cannot be caught in Swi
 Add the following to your Package.swift:
 
 ```swift
-.package(url: "https://github.com/sindresorhus/ExceptionCatcher", from: "0.0.0")
+.package(url: "https://github.com/sindresorhus/ExceptionCatcher", from: "1.0.0")
 ```
 
 Or add the package in Xcode.
