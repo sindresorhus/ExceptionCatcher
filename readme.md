@@ -8,13 +8,13 @@ There are many Cocoa APIs that can throw exceptions that cannot be caught in Swi
 
 ## Install
 
-Add the following to your Package.swift:
+Add the following to `Package.swift`:
 
 ```swift
 .package(url: "https://github.com/sindresorhus/ExceptionCatcher", from: "1.0.0")
 ```
 
-Or add the package in Xcode.
+[Or add the package in Xcode.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
 
 ## Usage
 
