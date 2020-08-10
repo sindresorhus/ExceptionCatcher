@@ -26,11 +26,20 @@ public enum ExceptionCatcher {
 	```
 	*/
 	@discardableResult
-	public static func `catch`<T>(callback: () -> T) throws -> T {
+	public static func `catch`<T>(callback: () throws -> T) throws -> T {
 		var returnValue: T!
+		var returnError: Error?
 
 		try _ExceptionCatcher.catchException {
-			returnValue = callback()
+			do {
+				returnValue = try callback()
+			} catch {
+				returnError = error
+			}
+		}
+
+		if let error = returnError {
+			throw error
 		}
 
 		return returnValue
