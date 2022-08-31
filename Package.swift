@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
@@ -19,13 +19,13 @@ let package = Package(
 	],
 	targets: [
 		.target(
-			name: "Internal"
-		),
-		.target(
 			name: "ExceptionCatcher",
 			dependencies: [
 				"Internal"
 			]
+		),
+		.target(
+			name: "Internal"
 		),
 		.testTarget(
 			name: "ExceptionCatcherTests",
