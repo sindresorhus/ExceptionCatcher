@@ -38,8 +38,8 @@ public enum ExceptionCatcher {
 			}
 		}
 
-		if let error = returnError {
-			throw error
+		if let returnError {
+			throw returnError
 		}
 
 		return returnValue
