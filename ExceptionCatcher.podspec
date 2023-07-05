@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/Ali72/ExceptionCatcher'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.authors          = {
-    'sindresorhus' => 'sindresorhus@gmail.com'
+    'sindresorhus' => 'sindresorhus@gmail.com',
     'Ali Khajehpour' => 'alikhajepur@gmail.com'
   }
   spec.source           = { :git => 'https://github.com/Ali72/ExceptionCatcher', :tag => spec.version.to_s }
