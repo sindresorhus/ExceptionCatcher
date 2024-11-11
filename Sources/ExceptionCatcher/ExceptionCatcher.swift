@@ -1,5 +1,5 @@
 @_implementationOnly import Foundation
-@_implementationOnly import Internal
+@_implementationOnly import ExceptionCatcherInternal
 
 public enum ExceptionCatcher {
 	/**
