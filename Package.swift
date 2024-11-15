@@ -21,11 +21,11 @@ let package = Package(
 		.target(
 			name: "ExceptionCatcher",
 			dependencies: [
-				"Internal"
+				"ExceptionCatcherInternal"
 			]
 		),
 		.target(
-			name: "Internal"
+			name: "ExceptionCatcherInternal"
 		),
 		.testTarget(
 			name: "ExceptionCatcherTests",
