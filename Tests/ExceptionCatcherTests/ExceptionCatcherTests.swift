@@ -1,20 +1,31 @@
+import Testing
 import Foundation
-import XCTest
 import ExceptionCatcher
 
 final class Fixture: NSObject {}
 
-final class ExceptionCatcherTests: XCTestCase {
-	func testCatch() throws {
-		XCTAssertThrowsError(
+@Suite("ExceptionCatcher Tests")
+struct ExceptionCatcherTests {
+	@Test("Throws error when accessing non-existent key")
+	func testExceptionCatcherThrows() async throws {
+		let fixture = Fixture()
+
+		#expect(throws: NSError.self) {
 			try ExceptionCatcher.catch {
-				let fixture = Fixture()
 				fixture.value(forKey: "nope")
 			}
-		)
+		}
+	}
 
+	@Test("Successfully returns value when no exception occurs")
+	func testExceptionCatcherSuccess() async throws {
 		let fixtureString = "🦄"
+
+		#expect(throws: Never.self) {
+			try ExceptionCatcher.catch { fixtureString }
+		}
+
 		let result = try ExceptionCatcher.catch { fixtureString }
-		XCTAssertEqual(result, fixtureString)
+		#expect(result == fixtureString)
 	}
 }
