@@ -25,6 +25,7 @@ public enum ExceptionCatcher {
 	}
 	```
 	*/
+	@inline(__always)
 	@discardableResult
 	public static func `catch`<T>(callback: () throws -> T) throws -> T {
 		var returnValue: T!
